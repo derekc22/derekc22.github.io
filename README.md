@@ -1,1 +1,0 @@
-# derekc22.github.io
