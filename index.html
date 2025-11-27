@@ -1,77 +1,137 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of derekc22">
-    <title>derekc22 - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Jon Barron (Replica)</title>
+  
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+  <div class="container">
+    
+    <!-- Header Section -->
     <header>
-        <nav>
-            <div class="container">
-                <h1 class="logo">derekc22</h1>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+      <div class="header-text">
+        <h1 class="name">Your Name</h1>
+        <div class="bio">
+          <p>
+            I am a research scientist at <a href="#">Google Research</a>. I am interested in computer vision, machine learning, and optimization.
+          </p>
+          <p>
+            Previously, I did my PhD at <a href="#">UC Berkeley</a>, advised by <a href="#">Prof. Name</a>. I've also spent time at <a href="#">OpenAI</a> and <a href="#">DeepMind</a>.
+          </p>
+        </div>
+        <div class="header-links">
+          <a href="mailto:email@example.com">Email</a> /
+          <a href="#">CV</a> /
+          <a href="#">Google Scholar</a> /
+          <a href="#">GitHub</a> /
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+      <div class="profile-photo">
+        <!-- Placeholder for profile photo -->
+        <img src="https://via.placeholder.com/230" alt="Profile Photo">
+      </div>
     </header>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="container">
-                <h2>Hello, I'm derekc22</h2>
-                <p class="tagline">Welcome to my personal website</p>
-            </div>
-        </section>
+    <!-- Research Section -->
+    <section>
+      <h2>Research</h2>
+      <p style="margin-bottom: 30px;">
+        I'm interested in computer vision, machine learning, optimization, and graphics. Much of my research is about inferring the physical world (shape, motion, color, light, etc) from images.
+      </p>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>This is where you can write about yourself, your background, interests, and what you do.</p>
+      <div class="publication-list">
+        
+        <!-- Publication 1 -->
+        <div class="publication-item">
+          <div class="pub-thumbnail">
+            <img src="https://via.placeholder.com/320x180" alt="Paper Thumbnail">
+          </div>
+          <div class="pub-details">
+            <a href="#" class="pub-title">NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</a>
+            <div class="pub-authors">
+              <strong>Your Name</strong>, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng
             </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p>Description of your first project</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p>Description of your second project</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 3</h3>
-                        <p>Description of your third project</p>
-                    </div>
-                </div>
+            <div class="pub-venue">
+              ECCV 2020 (Oral)
             </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Get in touch with me:</p>
-                <ul class="contact-links">
-                    <li><a href="https://github.com/derekc22" target="_blank">GitHub</a></li>
-                    <li><a href="mailto:your.email@example.com">Email</a></li>
-                </ul>
+            <div class="pub-desc">
+              We present a method that achieves state-of-the-art results for synthesizing novel views of complex scenes by optimizing an underlying continuous volumetric scene function using a sparse set of input views.
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 derekc22. All rights reserved.</p>
+            <div class="pub-links">
+              <a href="#">[Paper]</a>
+              <a href="#">[Code]</a>
+              <a href="#">[Video]</a>
+              <a href="#">[Project Page]</a>
+            </div>
+          </div>
         </div>
+
+        <!-- Publication 2 -->
+        <div class="publication-item">
+          <div class="pub-thumbnail">
+            <img src="https://via.placeholder.com/320x180" alt="Paper Thumbnail">
+          </div>
+          <div class="pub-details">
+            <a href="#" class="pub-title">Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields</a>
+            <div class="pub-authors">
+              Jonathan T. Barron, Ben Mildenhall, <strong>Your Name</strong>, Peter Hedman, Ricardo Martin-Brualla, Pratul P. Srinivasan
+            </div>
+            <div class="pub-venue">
+              ICCV 2021 (Best Paper Honorable Mention)
+            </div>
+            <div class="pub-desc">
+              Mip-NeRF reduces aliasing artifacts in NeRF by casting cones instead of rays.
+            </div>
+            <div class="pub-links">
+              <a href="#">[Paper]</a>
+              <a href="#">[Code]</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publication 3 -->
+        <div class="publication-item">
+          <div class="pub-thumbnail">
+            <img src="https://via.placeholder.com/320x180" alt="Paper Thumbnail">
+          </div>
+          <div class="pub-details">
+            <a href="#" class="pub-title">Understanding the World Through Images</a>
+            <div class="pub-authors">
+              <strong>Your Name</strong>, Another Author
+            </div>
+            <div class="pub-venue">
+              CVPR 2023
+            </div>
+            <div class="pub-desc">
+              A novel approach to understanding semantic context in wild images using self-supervised learning.
+            </div>
+            <div class="pub-links">
+              <a href="#">[Paper]</a>
+              <a href="#">[Code]</a>
+              <a href="#">[Data]</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Design inspired by <a href="https://jonbarron.info/">Jon Barron</a>'s website.
+      </p>
     </footer>
+
+  </div>
+
 </body>
 </html>
