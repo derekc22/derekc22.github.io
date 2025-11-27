@@ -84,39 +84,39 @@ h2 {
   font-weight: 600;
 }
 
-/* Publications List */
-.publication-list {
+/* Projects List */
+.project-list {
   list-style: none;
   padding: 0;
 }
 
-.publication-item {
+.project-item {
   display: flex;
   margin-bottom: 40px;
   align-items: flex-start;
 }
 
-.pub-thumbnail {
+.proj-thumbnail {
   flex: 0 0 200px;
   margin-right: 30px;
 }
 
-.pub-thumbnail img {
+.proj-thumbnail img {
   width: 100%;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   transition: opacity 0.3s;
 }
 
-.pub-thumbnail img:hover {
+.proj-thumbnail img:hover {
     opacity: 0.8;
 }
 
-.pub-details {
+.proj-details {
   flex: 1;
 }
 
-.pub-title {
+.proj-title {
   font-weight: 700;
   font-size: 1.1rem;
   color: #000;
@@ -124,23 +124,23 @@ h2 {
   margin-bottom: 5px;
 }
 
-.pub-authors {
+.proj-authors {
   margin-bottom: 5px;
   color: #444;
 }
 
-.pub-venue {
+.proj-venue {
   font-style: italic;
   color: #666;
   margin-bottom: 10px;
 }
 
-.pub-desc {
+.proj-desc {
   font-size: 0.95rem;
   margin-bottom: 10px;
 }
 
-.pub-links a {
+.proj-links a {
   margin-right: 10px;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -152,7 +152,7 @@ footer {
   margin-top: 80px;
   padding-top: 20px;
   border-top: 1px solid #eee;
-  text-align: right;
+  text-align: center;
   font-size: 0.9rem;
   color: #888;
 }
@@ -173,11 +173,11 @@ footer {
     margin-bottom: 30px;
   }
 
-  .publication-item {
+  .project-item {
     flex-direction: column;
   }
 
-  .pub-thumbnail {
+  .proj-thumbnail {
     margin-right: 0;
     margin-bottom: 20px;
     width: 100%;

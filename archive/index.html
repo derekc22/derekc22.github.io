@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Jon Barron (Replica)</title>
+  
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    strong {
+      color: #000;
+    }
+
+    /* Layout Container */
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Header Section */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 60px;
+    }
+
+    .header-text {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .name {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .bio {
+      margin-bottom: 20px;
+    }
+
+    .header-links {
+      font-size: 1.1rem;
+    }
+
+    .header-links a {
+      margin-right: 15px;
+    }
+
+    .profile-photo {
+      flex: 0 0 250px;
+      text-align: center;
+    }
+
+    .profile-photo img {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    /* Publications List */
+    .publication-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .publication-item {
+      display: flex;
+      margin-bottom: 40px;
+      align-items: flex-start;
+    }
+
+    .pub-thumbnail {
+      flex: 0 0 200px;
+      margin-right: 30px;
+    }
+
+    .pub-thumbnail img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: opacity 0.3s;
+    }
+    
+    .pub-thumbnail img:hover {
+        opacity: 0.8;
+    }
+
+    .pub-details {
+      flex: 1;
+    }
+
+    .pub-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #000;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .pub-authors {
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    .pub-venue {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .pub-desc {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .pub-links a {
+      margin-right: 10px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      text-align: right;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header-text {
+        padding-right: 0;
+      }
+
+      .profile-photo {
+        margin-bottom: 30px;
+      }
+
+      .publication-item {
+        flex-direction: column;
+      }
+
+      .pub-thumbnail {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    
+    <!-- Header Section -->
+    <header>
+      <div class="header-text">
+        <h1 class="name">Your Name</h1>
+        <div class="bio">
+          <p>
+            I am a projects scientist at <a href="#">Google Projects</a>. I am interested in computer vision, machine learning, and optimization.
+          </p>
+          <p>
+            Previously, I did my PhD at <a href="#">UC Berkeley</a>, advised by <a href="#">Prof. Name</a>. I've also spent time at <a href="#">OpenAI</a> and <a href="#">DeepMind</a>.
+          </p>
+        </div>
+        <div class="header-links">
+          <a href="mailto:email@example.com">Email</a> /
+          <a href="#">CV</a> /
+          <a href="#">Google Scholar</a> /
+          <a href="#">GitHub</a> /
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+      <div class="profile-photo">
+        <!-- Placeholder for profile photo -->
+        <img src="https://via.placeholder.com/230" alt="Profile Photo">
+      </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section>
+      <h2>Projects</h2>
+      <p style="margin-bottom: 30px;">
+        I'm interested in computer vision, machine learning, optimization, and graphics. Much of my projects is about inferring the physical world (shape, motion, color, light, etc) from images.
+      </p>
+
+      <div class="publication-list">
+        
+        <!-- Publication 1 -->
+        <div class="publication-item">
+          <div class="pub-thumbnail">
+            <img src="https://via.placeholder.com/320x180" alt="Paper Thumbnail">
+          </div>
+          <div class="pub-details">
+            <a href="#" class="pub-title">NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</a>
+            <div class="pub-authors">
+              <strong>Your Name</strong>, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng
+            </div>
+            <div class="pub-venue">
+              ECCV 2020 (Oral)
+            </div>
+            <div class="pub-desc">
+              We present a method that achieves state-of-the-art results for synthesizing novel views of complex scenes by optimizing an underlying continuous volumetric scene function using a sparse set of input views.
+            </div>
+            <div class="pub-links">
+              <a href="#">[Paper]</a>
+              <a href="#">[Code]</a>
+              <a href="#">[Video]</a>
+              <a href="#">[Project Page]</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="publication-item">
+          <div class="pub-thumbnail">
+            <img src="https://via.placeholder.com/320x180" alt="Paper Thumbnail">
+          </div>
+          <div class="pub-details">
+            <a href="#" class="pub-title">Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields</a>
+            <div class="pub-authors">
+              Jonathan T. Barron, Ben Mildenhall, <strong>Your Name</strong>, Peter Hedman, Ricardo Martin-Brualla, Pratul P. Srinivasan
+            </div>
+            <div class="pub-venue">
+              ICCV 2021 (Best Paper Honorable Mention)
+            </div>
+            <div class="pub-desc">
+              Mip-NeRF reduces aliasing artifacts in NeRF by casting cones instead of rays.
+            </div>
+            <div class="pub-links">
+              <a href="#">[Paper]</a>
+              <a href="#">[Code]</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publication 3 -->
+        <div class="publication-item">
+          <div class="pub-thumbnail">
+            <img src="https://via.placeholder.com/320x180" alt="Paper Thumbnail">
+          </div>
+          <div class="pub-details">
+            <a href="#" class="pub-title">Understanding the World Through Images</a>
+            <div class="pub-authors">
+              <strong>Your Name</strong>, Another Author
+            </div>
+            <div class="pub-venue">
+              CVPR 2023
+            </div>
+            <div class="pub-desc">
+              A novel approach to understanding semantic context in wild images using self-supervised learning.
+            </div>
+            <div class="pub-links">
+              <a href="#">[Paper]</a>
+              <a href="#">[Code]</a>
+              <a href="#">[Data]</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Design inspired by <a href="https://jonbarron.info/">Jon Barron</a>'s website.
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
