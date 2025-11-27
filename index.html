@@ -3,75 +3,414 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of derekc22">
-    <title>derekc22 - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Personal academic website of Derek Chen">
+    <meta name="author" content="Derek Chen">
+    <title>Derek Chen - Academic Website</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        a {
+            color: #1772d0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: normal;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-photo {
+            flex-shrink: 0;
+        }
+
+        .profile-photo img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Placeholder for profile photo */
+        .photo-placeholder {
+            width: 200px;
+            height: 200px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .bio {
+            flex: 1;
+        }
+
+        .bio p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+        }
+
+        .contact-info a {
+            margin-right: 15px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 22px;
+            font-weight: normal;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+            margin: 30px 0 20px 0;
+        }
+
+        /* Research/Publications Section */
+        .publication {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+        }
+
+        .pub-image {
+            flex-shrink: 0;
+        }
+
+        .pub-image img {
+            width: 160px;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        /* Placeholder for publication images */
+        .pub-image-placeholder {
+            width: 160px;
+            height: 90px;
+            background-color: #e8e8e8;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .pub-details {
+            flex: 1;
+        }
+
+        .pub-title {
+            font-weight: bold;
+            font-size: 15px;
+            color: #1772d0;
+            margin-bottom: 5px;
+        }
+
+        .pub-title a {
+            color: #1772d0;
+        }
+
+        .pub-authors {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .pub-authors .highlight {
+            font-weight: bold;
+        }
+
+        .pub-venue {
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .pub-links a {
+            font-size: 13px;
+            margin-right: 12px;
+        }
+
+        /* News Section */
+        .news-list {
+            list-style: none;
+        }
+
+        .news-list li {
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Teaching Section */
+        .teaching-list {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        .teaching-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #888;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .profile {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .bio p {
+                text-align: left;
+            }
+
+            .publication {
+                flex-direction: column;
+            }
+
+            .pub-image {
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            .contact-info a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1 class="logo">derekc22</h1>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Derek Chen</h1>
+        </div>
 
-    <main>
-        <section id="hero" class="hero">
-            <div class="container">
-                <h2>Hello, I'm derekc22</h2>
-                <p class="tagline">Welcome to my personal website</p>
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="profile-photo">
+                <!-- Replace with your actual photo -->
+                <div class="photo-placeholder">
+                    Your Photo<br>(200x200px)
+                </div>
+                <!-- <img src="images/photo.jpg" alt="Derek Chen"> -->
             </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>This is where you can write about yourself, your background, interests, and what you do.</p>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h3>Project 1</h3>
-                        <p>Description of your first project</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 2</h3>
-                        <p>Description of your second project</p>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 3</h3>
-                        <p>Description of your third project</p>
-                    </div>
+            <div class="bio">
+                <p>
+                    I am a [position] at [institution/organization]. My research interests include 
+                    [research area 1], [research area 2], and [research area 3].
+                </p>
+                <p>
+                    Previously, I received my [degree] from [university] where I worked with 
+                    <a href="#">Prof. Advisor Name</a>. Before that, I completed my [previous degree] 
+                    at [previous institution].
+                </p>
+                <p>
+                    I am interested in [brief description of research interests and goals].
+                </p>
+                <div class="contact-info">
+                    <a href="mailto:your.email@example.com">Email</a>
+                    <a href="https://github.com/derekc22" target="_blank">GitHub</a>
+                    <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                    <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+                    <a href="cv.pdf" target="_blank">CV</a>
                 </div>
             </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Get in touch with me:</p>
-                <ul class="contact-links">
-                    <li><a href="https://github.com/derekc22" target="_blank">GitHub</a></li>
-                    <li><a href="mailto:your.email@example.com">Email</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 derekc22. All rights reserved.</p>
         </div>
-    </footer>
+
+        <!-- News Section -->
+        <h2 class="section-title">News</h2>
+        <ul class="news-list">
+            <li>
+                <span class="news-date">[Month Year]</span> — 
+                [News item about paper acceptance, award, etc.]
+            </li>
+            <li>
+                <span class="news-date">[Month Year]</span> — 
+                [News item about starting new position, internship, etc.]
+            </li>
+            <li>
+                <span class="news-date">[Month Year]</span> — 
+                [News item about talk, presentation, etc.]
+            </li>
+        </ul>
+
+        <!-- Research/Publications Section -->
+        <h2 class="section-title">Research</h2>
+
+        <!-- Publication 1 -->
+        <div class="publication">
+            <div class="pub-image">
+                <!-- Replace with actual paper thumbnail -->
+                <div class="pub-image-placeholder">
+                    Paper Image
+                </div>
+                <!-- <img src="images/paper1.png" alt="Paper 1 Thumbnail"> -->
+            </div>
+            <div class="pub-details">
+                <div class="pub-title">
+                    <a href="#">Paper Title: A Novel Approach to Something Important</a>
+                </div>
+                <div class="pub-authors">
+                    <span class="highlight">Derek Chen</span>, 
+                    Coauthor One, 
+                    Coauthor Two
+                </div>
+                <div class="pub-venue">
+                    Conference/Journal Name (VENUE), Year
+                </div>
+                <div class="pub-links">
+                    <a href="#">[Paper]</a>
+                    <a href="#">[Project Page]</a>
+                    <a href="#">[Code]</a>
+                    <a href="#">[Video]</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="publication">
+            <div class="pub-image">
+                <div class="pub-image-placeholder">
+                    Paper Image
+                </div>
+            </div>
+            <div class="pub-details">
+                <div class="pub-title">
+                    <a href="#">Another Research Paper Title</a>
+                </div>
+                <div class="pub-authors">
+                    Coauthor One, 
+                    <span class="highlight">Derek Chen</span>, 
+                    Coauthor Three
+                </div>
+                <div class="pub-venue">
+                    Another Conference Name (CONF), Year
+                </div>
+                <div class="pub-links">
+                    <a href="#">[Paper]</a>
+                    <a href="#">[Code]</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication 3 -->
+        <div class="publication">
+            <div class="pub-image">
+                <div class="pub-image-placeholder">
+                    Paper Image
+                </div>
+            </div>
+            <div class="pub-details">
+                <div class="pub-title">
+                    <a href="#">Third Research Paper About Interesting Topic</a>
+                </div>
+                <div class="pub-authors">
+                    <span class="highlight">Derek Chen</span>, 
+                    Coauthor Four
+                </div>
+                <div class="pub-venue">
+                    Workshop on Topic (Workshop), Year
+                </div>
+                <div class="pub-links">
+                    <a href="#">[Paper]</a>
+                    <a href="#">[Slides]</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teaching Section -->
+        <h2 class="section-title">Teaching</h2>
+        <ul class="teaching-list">
+            <li>
+                <strong>Course Name (Course Code)</strong> — Role (Semester Year)
+            </li>
+            <li>
+                <strong>Another Course (Code)</strong> — Teaching Assistant (Semester Year)
+            </li>
+        </ul>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>
+                Template inspired by <a href="https://jonbarron.info/" target="_blank">Jon Barron's website</a>.
+                Last updated: 2025.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
