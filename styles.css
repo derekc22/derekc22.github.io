@@ -84,7 +84,7 @@ header {
   height: 230px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 35%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
