@@ -172,10 +172,37 @@ footer {
   color: #888;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-text {
+    padding-right: 0;
+  }
+
+  .profile-photo {
+    margin-bottom: 30px;
+  }
+
+  .project-item {
+    flex-direction: column;
+  }
+
+  .proj-thumbnail {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+  }
+}
 
 /* Github Chart */
 .github-chart {
-  margin-top: 100px;
+  margin-top: 70px;
   margin-bottom: 00px;
   text-align: center;
 }
