@@ -190,6 +190,7 @@ footer {
 
   .project-item {
     flex-direction: column;
+    align-items: center; /* center thumbnail + details */
   }
 
   .proj-thumbnail {
@@ -197,6 +198,21 @@ footer {
     margin-bottom: 20px;
     width: 100%;
     max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .proj-thumbnail img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .proj-details {
+    text-align: center; /* center all project text */
+  }
+
+  .proj-links a {
+    display: inline-block; /* preserve spacing when centered */
   }
 }
 
@@ -211,3 +227,9 @@ footer {
   max-width: 100%;
   height: auto;
 }
+
+/* Add scroll padding for anchor targets
+html {
+  scroll-padding-top: 80px; /* Adjust this value to match your header height
+}
+ */
