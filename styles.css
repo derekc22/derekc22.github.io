@@ -9,6 +9,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: #1772d0;
   text-decoration: none;
@@ -106,17 +110,44 @@ h2 {
 }
 
 .project-item {
+  position: relative;
+  isolation: isolate;
   display: flex;
   margin-bottom: 40px;
   align-items: flex-start;
+  transform-origin: center;
+}
+
+.project-item.is-anchor-target {
+  animation: anchor-target-elevate 1.8s ease-out;
+}
+
+.project-item::before {
+  content: "";
+  position: absolute;
+  inset: -14px -16px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(23, 114, 208, 0.12), rgba(23, 114, 208, 0.03) 55%, rgba(23, 114, 208, 0.14));
+  box-shadow: 0 0 0 0 rgba(23, 114, 208, 0), 0 18px 42px rgba(23, 114, 208, 0);
+  opacity: 0;
+  transform: scale(0.985);
+  transform-origin: center;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.project-item.is-anchor-target::before {
+  animation: anchor-target-panel 1.8s ease-out;
 }
 
 .proj-thumbnail {
   flex: 0 0 200px;
   margin-right: 30px;
+  scroll-margin-block: 28vh;
 }
 
 .proj-thumbnail img {
+  display: block;
   width: 100%;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -137,6 +168,10 @@ h2 {
   color: #000;
   display: block;
   margin-bottom: 5px;
+}
+
+.project-item.is-anchor-target .proj-title {
+  animation: anchor-target-title-color 1.8s ease-out;
 }
 
 .proj-authors {
@@ -228,8 +263,73 @@ footer {
   height: auto;
 }
 
-/* Add scroll padding for anchor targets
-html {
-  scroll-padding-top: 80px; /* Adjust this value to match your header height
+@keyframes anchor-target-panel {
+  0% {
+    opacity: 0;
+    transform: scale(0.985);
+    box-shadow: 0 0 0 0 rgba(23, 114, 208, 0), 0 18px 42px rgba(23, 114, 208, 0);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(23, 114, 208, 0.10), 0 18px 42px rgba(23, 114, 208, 0.16);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(23, 114, 208, 0), 0 18px 42px rgba(23, 114, 208, 0);
+  }
 }
- */
+
+@keyframes anchor-target-elevate {
+  0% {
+    transform: scale(1);
+  }
+
+  28% {
+    transform: scale(1.018);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes anchor-target-title-color {
+  0% {
+    color: #000;
+  }
+
+  24% {
+    color: #1772d0;
+  }
+
+  100% {
+    color: #000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .project-item.is-anchor-target::before {
+    animation: none;
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(23, 114, 208, 0.16), 0 18px 42px rgba(23, 114, 208, 0.12);
+  }
+
+  .project-item.is-anchor-target {
+    animation: none;
+    transform: none;
+  }
+
+  .project-item.is-anchor-target .proj-title {
+    animation: none;
+    color: #1772d0;
+  }
+}
