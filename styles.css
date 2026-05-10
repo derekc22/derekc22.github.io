@@ -333,3 +333,12 @@ footer {
     color: #1772d0;
   }
 }
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.news-list li {
+  margin-bottom: 0.5rem;
+}
