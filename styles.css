@@ -151,11 +151,6 @@ h2 {
   width: 100%;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: opacity 0.3s;
-}
-
-.proj-thumbnail img:hover {
-    opacity: 0.8;
 }
 
 .proj-details {
